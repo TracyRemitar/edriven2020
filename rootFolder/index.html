@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>edriven2020</title>
-    <!--CSS-->
-    <link rel="stylesheet" href="/rootFolder/css/styles.css">
-</head>
-<body>
-    <!--Content-->
-    <h1>h1 Tag (Aligned to the Center)</h1>
-    <h2>h2 Tag</h2>
-    <h3>h3 Tag</h3>
-    <br>
-    <p>(line break)</p>
-    <br>
-    <p>p Tag</p>
-    <!--JS-->
-    <script src="/rootFolder/js/my.js">
-
-    </script>
-</body>
+<html>
+    <head>
+        <link rel="stylesheet" href="/rootFolder/css/styles.css">
+    </head>
+    <body onload="myFunction()">
+        <h1 id = "invalid"></h1>
+        <table>
+            <tr>
+                <th id="month" style="text-align: center;font-size: xx-large;" colspan="7"></th>
+            </tr>
+            <tr>
+                <td style="background-color: red;color: white;">Sun</td>
+                <td>Mon</td>
+                <td>Tue</td>
+                <td>Wed</td>
+                <td>Thu</td>
+                <td>Fri</td>
+                <td>Sat</td>
+            </tr>
+            <tbody id="dates">
+                
+            </tbody>
+        </table>
+        <script src="/rootFolder/js/my.js"> </script>
+    </body>
 </html>
