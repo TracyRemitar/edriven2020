@@ -1,27 +1,38 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="/rootFolder/css/styles.css">
-    </head>
-    <body onload="myFunction()">
-        <h1 id = "invalid"></h1>
-        <table>
-            <tr>
-                <th id="month" style="text-align: center;font-size: xx-large;" colspan="7"></th>
-            </tr>
-            <tr>
-                <td style="background-color: red;color: white;">Sun</td>
-                <td>Mon</td>
-                <td>Tue</td>
-                <td>Wed</td>
-                <td>Thu</td>
-                <td>Fri</td>
-                <td>Sat</td>
-            </tr>
-            <tbody id="dates">
-                
-            </tbody>
-        </table>
-        <script src="/rootFolder/js/my.js"> </script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/rootFolder/css/styles.css">
+    <title>PA-3</title>
+</head>
+<body style="background-color: whitesmoke;">
+    <form>
+        <div>
+            <input type="number" oninput="show()" name="Subtotal" id="SubTotal" min="100" max="10000" placeholder="Subtotal">
+            <label> User input from 100 to 10,000 </label>
+        </div>
+        <div>
+            <input type="number" name="Tax" id="Tax" placeholder="Tax" disabled >
+            <label> +12% Tax </label>
+        </div>
+        <div>
+            <input type="number" name="Total" id="Total" placeholder="Total" disabled >
+            <label> Subtotal + Tax </label>
+        </div>
+        <div>
+            <input type= "number" oninput="coins()" name="AmountPaid" id="AmountPaid" placeholder="Amount Paid"  disabled>
+            <label> Minimum is base on Subtotal + Tax </label>
+        </div>
+        <div>
+            <input type="number" name="Change" id="Change" placeholder="Change" disabled >
+            <label> Amount Paid - Total </label>
+        </div>
+        <button id="Pay" disabled>Pay</button>
+    </form>
+    
+    <script src="/rootFolder/js/my.js"></script>
+
+</body>
 </html>
