@@ -227,7 +227,6 @@ let counter = 0;
     vcusName.value = viewMenu[clickedRow - 1].customerName;
 
     DImg = JSON.parse(localStorage.getItem("foodimg")) || [];
-    console.log(viewMenu[clickedRow - 1].content.index1 - 1);
     // Displaying Image
 
     // Display #1
