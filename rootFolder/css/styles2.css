@@ -1,0 +1,59 @@
+video {
+    position: fixed;
+    object-fit: cover;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  } 
+img {
+    width: 10vw;
+    height: auto;
+}
+.navbar-custom {
+    background-color: #ff6600;
+    height: 100px;
+}
+.contact{
+    color: white;
+    size: 2vw;
+    font-size: 2vw;
+}
+.contact:hover {color:darkorange}
+.viewport {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    display: flex;
+}
+.button{
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: orange;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    width: 10%;
+}
+.button:hover {background-color:darkorange}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+table{
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+}
+.container-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+}

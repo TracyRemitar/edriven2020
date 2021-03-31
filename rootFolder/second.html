@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trace</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="/css/styles2.css">
+    <link rel="shortcut icon" href="/img/Trace 3.png" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <video src="/img/background2.mp4" autoplay loop playsinline muted></video>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-custom navbar-expand-lg">
+        <div>
+            <a href="/index.html"><img src="/img/Trace 4.png"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="form-inline ml-auto" >
+                <button class="contact" style="background-color: #ff6600; border-color: orange; border-radius: 15px;">Contact <i class="fa fa-phone"></i></button>
+            </form>
+        </div>
+    </nav>
+    <section class="viewport" style="margin-top: 3%; margin-left: 3%;">
+        <!-- NEW BUTTON -->
+        <button class="button" type="button" data-toggle="modal" data-target="#exampleModal" > New 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg>
+        </button>
+        <!-- Modal New -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <!--Modal Header-->
+              <div class="modal-header" style="background-color: #fc7418; color: white;">
+                <h5 class="modal-title" id="exampleModalLabel">New Order</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <!--Modal Body-->
+              <div class="modal-body">
+                <div class="form-group" >
+                  <form name="new0">
+                    <input type="ORnumber" class="form-control" id="ORnumber" placeholder="OR Number" style="margin-bottom: 10px;">
+                  <input type="CustomerName" class="form-control" id="CustomerName" placeholder="Customer Name">
+                  </form>
+                </div>
+                <div class="form-group">
+                  <h5 class="modal-title" id="Items" style="float: left;">Items</h5>
+                </div>
+                <div class="form-group">
+                  <!--Item 1-->
+                  <form name = "new1">
+                    <div class="input-group">
+                        <select class="custom-select" id="Item1">
+                          <option disabled selected value>-- Select your food --</option>
+                        </select>
+                        <input type="number" min="1" class="form-control" id="Price1" placeholder="Price" onchange="calculateTotal1()">
+                        <input type="number" min="1" class="form-control" id="Quantity1" placeholder="Quantity" onchange="calculateTotal1()">
+                        <input type="number" class="form-control" id="Subtotal1" placeholder="Subtotal" disabled>
+                    </div>
+                  </form>
+                  <!--Item 2-->
+                  <form name= "new2">
+                    <div class="input-group">
+                      <select class="custom-select" id="Item2">
+                        <option disabled selected value>-- Select your food --</option>
+                      </select>
+                      <input type="number" min="1"class="form-control" id="Price2" placeholder="Price" onchange="calculateTotal2()">
+                      <input type="number" min="1" class="form-control" id="Quantity2" placeholder="Quantity" onchange="calculateTotal2()">
+                      <input type="number" class="form-control" id="Subtotal2" placeholder="Subtotal" disabled>
+                    </div>
+                  </form>
+                  <!--Item 3-->
+                  <form name="new3">
+                    <div class="input-group">
+                      <select class="custom-select" id="Item3">
+                        <option disabled selected value>-- Select your food --</option>
+                      </select>
+                      <input type="number" min="1" class="form-control" id="Price3" placeholder="Price" onchange="calculateTotal3()">
+                      <input type="number" min="1" class="form-control" id="Quantity3" placeholder="Quantity" onchange="calculateTotal3()">
+                      <input type="number" class="form-control" id="Subtotal3" placeholder="Subtotal" disabled>
+                    </div>
+                  </form>
+                  <!--Item 4-->
+                  <form name="new4">
+                    <div class="input-group">
+                      <select class="custom-select" id="Item4">
+                        <option disabled selected value>-- Select your food --</option>
+                      </select>
+                      <input type="number" min="1" class="form-control" id="Price4" placeholder="Price" onchange="calculateTotal4()">
+                      <input type="number" min="1" class="form-control" id="Quantity4" placeholder="Quantity" onchange="calculateTotal4()">
+                      <input type="number" class="form-control" id="Subtotal4" placeholder="Subtotal" disabled>
+                    </div>
+                  </form>
+                  
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="Save()">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Modal View-->
+        <div class="modal fade" id="view" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <!--Modal View Header-->
+              <div class="modal-header" style="background-color: #fc7418; color: white;">
+                <h5 class="modal-title" id="view">View Order</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <!--Modal View Body-->
+              <div class="modal-body">
+                <div class="form-group">
+                  <input type="viewORnumber" class="form-control" id="viewORnumber" placeholder="OR Number" style="margin-bottom: 10px;"  disabled>
+                  <input type="viewCustomerName" class="form-control" id="viewCustomerName" placeholder="Customer Name" disabled>
+                </div>
+                <div class="row">
+                  <div class="form-group">
+                    <h5 class="modal-title" id="Items" style="float: left; margin-left: 5px;">Items</h5>
+                  </div>
+                  <div class="container-card" name="cards">
+                    <!-- View Item One -->
+                    <div class="card" style="width: 18rem; margin-right: 5px; margin-left: 5px;">
+                      <img id="img1" class="card-img-top" alt="No Item"/>
+                      <div class="card-body">
+                        <p class="card-text">
+                          <div id="vitem1" class="fw-bold"></div>
+                          <div id="vPrice1"></div>
+                          <div id="vQuantity1"></div>
+                        </p>
+                      </div>
+                    </div>
+                    <!-- View Item Two -->
+                    <div class="card" style="width: 18rem; margin-right: 5px;">
+                      <img id="img2" class="card-img-top" alt="No Item"/>
+                      <div class="card-body">
+                        <p class="card-text">
+                          <div id="vitem2" class="fw-bold"></div>
+                          <div id="vPrice2"></div>
+                          <div id="vQuantity2"></div>
+                        </p>
+                      </div>
+                    </div>
+                    <!-- View Item Three -->
+                    <div class="card" style="width: 18rem; margin-right: 5px;">
+                      <img id="img3" class="card-img-top" alt="No Item"/>
+                      <div class="card-body">
+                        <p class="card-text">
+                          <div id="vitem3" class="fw-bold"></div>
+                          <div id="vPrice3"></div>
+                          <div id="vQuantity3"></div>
+                        </p>
+                      </div>
+                    </div>
+                    <!-- View Item Four -->
+                    <div class="card" style="width: 18rem; margin-right: 5px;">
+                      <img id="img4" class="card-img-top" alt="No Item"/>
+                      <div class="card-body">
+                        <p class="card-text">
+                          <div id="vitem4" class="fw-bold"></div>
+                          <div id="vPrice4"></div>
+                          <div id="vQuantity4"></div>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- Table -->
+    <div class="table-bordered table table-hover viewport" style="width: 100%; margin-top: 1%;">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Order #</th>
+                  <th scope="col">Customer Name</th>
+                  <th scope="col">Total</th>
+                  <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tblcontent">
+              
+            </tbody>
+        </table>
+    </div>
+
+  <script src="/js/my.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
